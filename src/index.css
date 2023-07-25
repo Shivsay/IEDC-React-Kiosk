@@ -65,6 +65,11 @@ body {
     font-weight: 600;
 }
 
+.sidebar-btn {
+    background-color: darkblue;
+    border-color: darkblue;
+}
+
 .content {
     margin-left: 45%;
     padding: 20px;

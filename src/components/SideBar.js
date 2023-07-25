@@ -1,16 +1,17 @@
 import React from "react";
 import logo from '../IEDC_Logo.png';
 
-function SideBar() {
+const SideBar = ({handleBarMainChange}) => {
+
     return (
-        <div class="sidebar">
-            <img src={logo} class="logo"/>
-            <hr class="line"></hr>
-            <div class="sidebar-div">
-                <a class="sidebar-a" href="#" onclick="showContent('home')">HOME</a>
-                <a class="sidebar-a" href="#" onclick="showContent('events')">EVENTS</a>
-                <a class="sidebar-a" href="#" onclick="showContent('about')">ABOUT</a>
-                <a class="sidebar-a" href="#" onclick="showContent('contact')">CONTACT</a>
+        <div className="sidebar">
+            <img src={logo} className="logo"/>
+            <hr className="line"></hr>
+            <div className="sidebar-div">
+                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('home')}>HOME</a>
+                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('events')}>EVENTS</a>
+                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('about')}>ABOUT</a>
+                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('contact')}>CONTACT</a>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React from "react"
 
 function EventsContent() {
     return (
-        <div class="card">
+        <div className="card">
         Text
         </div>
     );
