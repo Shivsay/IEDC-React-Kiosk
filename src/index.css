@@ -37,13 +37,12 @@ body {
     border-bottom-right-radius: 500px;
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: left;
 }
 
 .logo {
     height: auto;
-    max-width: 50%;
+    max-width: 105%;
 }
 
 .line {
@@ -54,6 +53,7 @@ body {
 
 .sidebar-div {
     font-size: 40px;
+    width: 50%;
 }
 
 .sidebar-a {
@@ -63,11 +63,6 @@ body {
     display: block;
     letter-spacing: -1px;
     font-weight: 600;
-}
-
-.sidebar-btn {
-    background-color: darkblue;
-    border-color: darkblue;
 }
 
 .content {

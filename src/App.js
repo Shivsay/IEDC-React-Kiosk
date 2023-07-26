@@ -10,7 +10,6 @@ function App() {
     const [selectedContent, setSelectedContent]=useState('home');
 
     const handleMainChange = (selectedContent) => {
-        console.log("LLL");
         setSelectedContent(selectedContent);
     }
 
