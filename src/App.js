@@ -1,4 +1,11 @@
 import { useState } from 'react';
+
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+
+import ErrorPage from "./components/ErrorPage";
 import SideBar from "./components/SideBar";
 import MainContent from "./components/MainContent";
 import EventsContent from "./components/EventsContent";
@@ -7,24 +14,49 @@ import ContactContent from "./components/ContactContent";
 
 
 function App() {
-    const [selectedContent, setSelectedContent]=useState('home');
 
-    const handleMainChange = (selectedContent) => {
-        setSelectedContent(selectedContent);
-    }
+        const router = createBrowserRouter([
+            {
+                path: "/",
+                element: <SideBar />,
+                errorElement: <ErrorPage />,
+                children: [         //Pathless Routes not working so had to add an SideBar element in Error Page instead
+                    {
+                        //errorElement: <ErrorPage />,
+                        children: [
+                            { index: true, element: <MainContent /> },
+                            {
+                                path: "home",
+                                element: <MainContent />,
+                            },
 
+                            {
+                                path: "events",
+                                element: <EventsContent />,
+                            }, 
 
-  return (
-      <div>
-        <SideBar handleBarMainChange={handleMainChange}/>
-        
-        {selectedContent === 'home' && <MainContent />}
-        {selectedContent === 'events' && <EventsContent />}
-        {selectedContent === 'about' && <AboutContent />}
-        {selectedContent === 'contact' && <ContactContent />}
+                            {
+                                path: "about",
+                                element: <AboutContent />,
+                            }, 
 
-      </div>
-  );
+                            {
+                                path: "contact",
+                                element: <ContactContent />,
+                            },
+
+                        ],
+                    },
+                ],
+            },
+        ]);
+
+        return (
+            <div>
+                <RouterProvider router={router} />
+            </div>
+        );
+            
 }
 
 export default App;

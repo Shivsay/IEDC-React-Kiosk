@@ -1,23 +1,31 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 import logo from '../IEDC_Logo.png';
 
-const SideBar = ({handleBarMainChange}) => {
+function SideBar() {
 
-    return (
-        <div className="sidebar">
-    
-            <div className="sidebar-div">
-          
-                <a href="#" onClick= {() => handleBarMainChange('home')}> <img src={logo} className="logo"/> </a>
-                <hr className="line"></hr>
+        return (
+            <div>
+                <div className="sidebar">
+            
+                    <div className="sidebar-div">
+                  
+                        <Link to={'/home'}><img src={logo} className="logo"/></Link>
+                        <hr className="line"></hr>
 
-                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('home')}>HOME</a>
-                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('events')}>EVENTS</a>
-                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('about')}>ABOUT</a>
-                <a className="sidebar-a" href="#" onClick= {() => handleBarMainChange('contact')}>CONTACT</a>
+                        <Link to={'/home'} className="sidebar-a">HOME</Link>
+                        <Link to={'/events'} className="sidebar-a">EVENTS</Link>
+                        <Link to={'/about'} className="sidebar-a">ABOUT</Link>
+                        <Link to={'/contact'} className="sidebar-a">CONTACT</Link>
+
+                    </div>
+
+                </div>
+
+                    <Outlet />
             </div>
-        </div>
-    );
+            );
+
 }
 
 export default SideBar;
