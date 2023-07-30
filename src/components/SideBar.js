@@ -13,10 +13,10 @@ function SideBar() {
                         <Link to={'/home'}><img src={logo} className="logo"/></Link>
                         <hr className="line"></hr>
 
-                        <Link to={'/home'} className="sidebar-a">HOME</Link>
-                        <Link to={'/events'} className="sidebar-a">EVENTS</Link>
-                        <Link to={'/about'} className="sidebar-a">ABOUT</Link>
-                        <Link to={'/contact'} className="sidebar-a">CONTACT</Link>
+                        <Link to={'/home'} className="sidebar-link">HOME</Link>
+                        <Link to={'/events'} className="sidebar-link">EVENTS</Link>
+                        <Link to={'/about'} className="sidebar-link">ABOUT</Link>
+                        <Link to={'/contact'} className="sidebar-link">CONTACT</Link>
 
                     </div>
 
