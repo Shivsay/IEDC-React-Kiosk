@@ -5,6 +5,8 @@ import CardContent from './CardContent';
 function EventsContent() {
     return (
         <div className="card-content">
+            <h1>Events</h1>
+            <div></div>     {/* spacing*/}
             <CardContent />
             <CardContent />
             <CardContent />
