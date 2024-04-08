@@ -5,7 +5,6 @@ import CardContent from './CardContent';
 function EventsContent() {
     return (
         <div className="card-content">
-         
             <CardContent />
             <CardContent />
             <CardContent />
